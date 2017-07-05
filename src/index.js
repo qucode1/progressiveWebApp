@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div>
         <h1 className={styles.heading}>Hello World</h1>
-        <p>Testing NPM scripts</p>
+        <p>Testing extract-text-webpack-plugin</p>
       </div>
     )
   }
