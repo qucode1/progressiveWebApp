@@ -35,7 +35,8 @@ module.exports = {
                 loader: 'css-loader',
                 options: {
                   modules: true,
-                  localIdentName: '[name]-[local]-[hash:base64:8]'
+                  localIdentName: '[name]-[local]-[hash:base64:8]',
+                  camelCase: true
                 }
               }
             ]
@@ -46,7 +47,8 @@ module.exports = {
               loader: 'css-loader',
               options: {
                 modules: true,
-                localIdentName: '[name]-[local]-[hash:base64:8]'
+                localIdentName: '[name]-[local]-[hash:base64:8]',
+                camelCase: true
               }
             }
           ]

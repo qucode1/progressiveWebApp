@@ -1,0 +1,30 @@
+.heading {
+  background-image: linear-gradient(to right, #22bbee, #0022dd);
+  color: white;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.title {
+  font-style: italic;
+  text-transform: uppercase;
+}
+.list {
+  display: flex;
+  justify-content: center;
+}
+.list-item {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 0 15px;
+  font-size: 2rem
+}
+.link {
+  color: #fff;
+}
+.link:hover, .link:focus {
+  color: #22bbee
+}
