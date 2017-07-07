@@ -1,12 +1,14 @@
 .heading {
-  background-image: linear-gradient(to right, #22bbee, #0022dd);
+  background-image: linear-gradient(to right, #22bbee, #0033ee);
   color: white;
 }
 .container {
+  max-width: var(--site-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+  margin: 0 auto;
 }
 .title {
   font-style: italic;
@@ -26,5 +28,5 @@
   color: #fff;
 }
 .link:hover, .link:focus {
-  color: #22bbee
+  color: #33ceff
 }

@@ -9,6 +9,7 @@
     "jest": "^20.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.1",
     "standard": "^10.0.2",
     "standard-loader": "^6.0.1",
     "style-loader": "^0.18.2",
