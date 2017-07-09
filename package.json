@@ -2,14 +2,19 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "html-webpack-plugin": "^2.29.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
+    "react-test-renderer": "^15.6.1",
     "standard": "^10.0.2",
     "standard-loader": "^6.0.1",
     "style-loader": "^0.18.2",
@@ -25,6 +30,12 @@
     "start": "webpack-dashboard -- webpack-dev-server",
     "webpack": "webpack-dashboard -- webpack",
     "test": "jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   },
   "author": "",
   "license": "ISC"

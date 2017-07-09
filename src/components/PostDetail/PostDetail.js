@@ -1,14 +1,17 @@
 import React from 'react'
 import Post from '../Post/Post'
+import NotFound from '../NotFound/NotFound'
+import { Route } from 'react-router-dom'
 
-import posts from '../../blog-posts.json'
-
-const PostDetail = function (props, { match }) {
-  const matchingPost = posts.posts.find((post) => post.slug === props.match.params.slug)
+const PostDetail = function (props) {
+  const matchingPost = props.posts.posts.find((post) => post.slug === props.match.params.slug)
   return (
     <div>
-      <Post {...matchingPost} details />
+      {matchingPost
+        ? <Post {...matchingPost} details />
+        : <Route component={() => <NotFound message='Post not found' />} />}
     </div>
   )
 }
+
 export default PostDetail
