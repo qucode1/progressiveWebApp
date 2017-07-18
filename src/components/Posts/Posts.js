@@ -19,6 +19,9 @@ const PostList = () => (
       <li>
         <Link to='/test'>Go Somewhere (Won't work)</Link>
       </li>
+      <li>
+        <Link to='/about/cyxc/7sy'>Go Somewhere (Won't work)</Link>
+      </li>
     </ul>
   </div>
 )
