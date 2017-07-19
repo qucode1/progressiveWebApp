@@ -31,48 +31,27 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: env === 'production'
-          ? ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: true,
-                  localIdentName: '[name]-[local]-[hash:base64:8]',
-                  camelCase: true
-                }
-              }
-            ]
-          })
-          : [
-            'style-loader',
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[name]-[local]-[hash:base64:8]',
-                camelCase: true
-              }
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]-[local]-[hash:base64:8]',
+              camelCase: true
             }
-          ]
+          }
+        ]
       }
     ]
   },
-  plugins: env === 'production'
-    ? [
-      new HtmlWebpackPlugin({
-        template: `${srcDir}/index.html`
-      }),
-      new DashboardPlugin(),
-      new ExtractTextPlugin({
-        filename: '[name].css'
-      })
-    ]
-    : [
-      new HtmlWebpackPlugin({
-        template: `${srcDir}/index.html`
-      }),
-      new DashboardPlugin()
-    ]
+  performance: {
+    hints: 'warning'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: `${srcDir}/index.html`
+    }),
+    new DashboardPlugin()
+  ]
 }
