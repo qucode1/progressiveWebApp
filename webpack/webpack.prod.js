@@ -5,7 +5,8 @@ const DashboardPlugin = require('webpack-dashboard/plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const CompressionPlugin = require("compression-webpack-plugin");
+const CompressionPlugin = require('compression-webpack-plugin')
+const OfflinePlugin = require('offline-plugin')
 
 const srcDir = resolve(__dirname, '../src')
 const env = process.env.NODE_ENV
@@ -84,6 +85,7 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name].css'
     }),
+    new OfflinePlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     })
