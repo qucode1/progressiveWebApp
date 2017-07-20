@@ -19,6 +19,8 @@
     "html-webpack-plugin": "^2.29.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
+    "preact": "^8.2.1",
+    "preact-compat": "^3.16.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
@@ -35,9 +37,9 @@
   "description": "webpack, babel, jest, react",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dashboard -- webpack-dev-server",
-    "webpack": "webpack-dashboard -- webpack",
-    "build": "webpack-dashboard -- webpack --config=webpack.prod.js -p",
+    "start": "webpack-dashboard -- webpack-dev-server --config=webpack/webpack.dev.js",
+    "webpack": "webpack-dashboard -- webpack --config=webpack/webpack.dev.js",
+    "build": "webpack-dashboard -- webpack --config=webpack/webpack.prod.js -p",
     "test": "jest"
   },
   "jest": {

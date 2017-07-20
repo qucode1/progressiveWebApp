@@ -4,10 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const srcDir = resolve(__dirname, 'src')
+const srcDir = resolve(__dirname, '../src')
 const env = process.env.NODE_ENV
 
 module.exports = {
+  // context: resolve(__dirname, '../src'),
   entry: `${srcDir}/index.js`,
   output: {
     filename: 'bundle.js'
@@ -44,6 +45,12 @@ module.exports = {
         ]
       }
     ]
+  },
+  'resolve': {
+    'alias': {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat'
+    }
   },
   performance: {
     hints: 'warning'
