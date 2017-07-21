@@ -92,7 +92,10 @@ module.exports = {
     }]),
     new OfflinePlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: 'vendor',
+      ServiceWorker: {
+        events: true
+      }
     })
   ]
 }
