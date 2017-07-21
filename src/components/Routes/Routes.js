@@ -6,16 +6,18 @@ import {
 
 import About from '../About/About'
 import Posts from '../Posts/Posts'
+import PostDetail from '../PostDetail/PostDetail'
 import NotFound from '../NotFound/NotFound'
+import posts from '../../blog-posts.json'
 
 const Routes = () => (
   <Switch>
     <Route exact path='/' render={() => (
       <h2>Welcome to my Blog!</h2>
     )} />
-    <Route path='/posts' component={Posts} />
-    <Route path='/about/:slug' component={() => <NotFound message='Url does not exist' />} />
-    <Route path='/about' component={About} />
+    <Route path='/posts/:slug' component={(props) => <PostDetail posts={posts} match={props.match} />} />
+    <Route path='/posts' component={() => <Posts posts={posts} />} />
+    <Route exact path='/about' component={About} />
     <Route component={() => <NotFound message='Url does not exist' />} />
   </Switch>
 )

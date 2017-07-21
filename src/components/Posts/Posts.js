@@ -1,15 +1,12 @@
 import React from 'react'
-import { Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Post from '../Post/Post'
-import posts from '../../blog-posts.json'
-import PostDetail from '../PostDetail/PostDetail'
-
 import styles from '../Post/Post.css'
 
-const PostList = () => (
+const Posts = (props) => (
   <div>
-    {posts.posts.map((post) => (
+    {props.posts.posts.map((post) => (
       <Post key={post.slug} {...post} details={false} />
     ))}
     <ul>
@@ -25,20 +22,5 @@ const PostList = () => (
     </ul>
   </div>
 )
-// PostDetail needs a 'wrapper component' to pass the posts data as a prop,
-// without losing the match object
-const PostDetailData = (props) => (
-  <PostDetail posts={posts} match={props.match} />
-)
 
-const Posts = function ({ match }) {
-  return (
-    <div>
-      <Switch>
-        <Route path={`${match.url}/:slug`} component={PostDetailData} />
-        <Route path={`${match.url}`} component={PostList} />
-      </Switch>
-    </div>
-  )
-}
 export default Posts
