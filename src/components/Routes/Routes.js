@@ -13,7 +13,7 @@ import posts from '../../blog-posts.json'
 const Routes = () => (
   <Switch>
     <Route exact path='/' render={() => (
-      <h2>Welcome to my Blog!</h2>
+      <h2>Welcome to my Blog! I want to update my Web App!</h2>
     )} />
     <Route path='/posts/:slug' component={(props) => <PostDetail posts={posts} match={props.match} />} />
     <Route path='/posts' component={() => <Posts posts={posts} />} />

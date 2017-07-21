@@ -4,6 +4,7 @@ import toJson from 'enzyme-to-json'
 import { mount } from 'enzyme'
 import { MemoryRouter } from 'react-router-dom'
 
+// import posts from '../../blog-posts.json'
 import Posts from './Posts'
 import PostDetail from '../PostDetail/PostDetail'
 
@@ -20,20 +21,10 @@ const match = {
   }
 }
 
-test('Should render PostDetails when visiting /posts/:slug', () => {
-  const component = mount(
-    <MemoryRouter initialEntries={['/posts/testing-with-jest-and-enzyme']} initialIndex={0} >
-      <Posts match={match}/>
-    </MemoryRouter>
-  )
-
-  expect(component.find(PostDetail).length).toBe(1)
-})
-
 test('Should render Post List', () => {
   const component = mount(
     <MemoryRouter initialEntries={['/posts']} initialIndex={0} >
-      <Posts match={match}/>
+      <Posts posts={posts}/>
     </MemoryRouter>
   )
 
@@ -41,7 +32,7 @@ test('Should render Post List', () => {
 })
 
 it('Posts Component should render as expected', () => {
-  const wrapper = shallow(<Posts match={match}/>)
+  const wrapper = shallow(<Posts posts={posts}u/>)
   const tree = toJson(wrapper)
   expect(tree).toMatchSnapshot()
 })
