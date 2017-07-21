@@ -1,8 +1,8 @@
 {
   "name": "Pick Us NRW",
-  "short_name": "PickUs",
+  "short_name": "Pick Us",
   "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "background_color": "#ffffff",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/",
