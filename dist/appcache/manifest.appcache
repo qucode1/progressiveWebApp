@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-7-21 13:21:23
+#ver:2017-7-21 15:07:20
 #plugin:4.8.3
 
 CACHE:
@@ -7,6 +7,17 @@ CACHE:
 /vendor.e2c03d.js
 /app.css
 /
+/favicon-16x16.png
+/icon-128x128.png
+/icon-192x192.png
+/icon-512x512.png
+/icon-96x96.png
+/manifest.json
+/icon-72x72.png
+/icon-152x152.png
+/icon-144x144.png
+/favicon-32x32.png
+/icon-384x384.png
 
 NETWORK:
 *

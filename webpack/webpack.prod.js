@@ -7,6 +7,7 @@ const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const srcDir = resolve(__dirname, '../src')
 const env = process.env.NODE_ENV
@@ -85,6 +86,10 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name].css'
     }),
+    new CopyWebpackPlugin([{
+      from: resolve(__dirname, '../src/icons/'),
+      to: resolve(__dirname, '../dist/')
+    }]),
     new OfflinePlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
