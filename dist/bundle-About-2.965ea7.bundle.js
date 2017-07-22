@@ -1,0 +1,2 @@
+webpackJsonp([2],{65:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var l=a(0),n=a(70),i=a.n(n),c=function(){return l.default.createElement("div",null,l.default.createElement("h1",{className:i.a.title},"Hi, I am Yannick"),l.default.createElement("p",{className:i.a.content},"This section is all about me, yay!"))};t.default=c},70:function(e,t,a){t=e.exports=a(63)(void 0),t.push([e.i,"",""]),t.locals={title:"About-title-3cMfCrid"}}});
+//# sourceMappingURL=bundle-About-2.965ea7.bundle.js.map
