@@ -1,27 +1,26 @@
 CACHE MANIFEST
-#ver:2017-7-22 14:03:11
+#ver:2017-7-22 14:37:18
 #plugin:4.8.3
 
 CACHE:
-/bundle-PostDetail-0.f245e4.bundle.js
-/bundle-Posts-1.68161e.bundle.js
-/bundle-About-2.965ea7.bundle.js
-/bundle-NotFound-3.8f8e0d.bundle.js
-/app.fd64e1.js
-/vendor.a9fa37.js
-/app.css
+/bundle-PostDetail-0.4b0b5a.bundle.js
+/bundle-Posts-1.0d040f.bundle.js
+/bundle-About-2.c10c60.bundle.js
+/bundle-NotFound-3.1f1823.bundle.js
+/app.3c652e.js
+/vendor.3796fb.js
 /
-/favicon-16x16.png
-/icon-128x128.png
 /favicon-32x32.png
-/icon-192x192.png
-/icon-512x512.png
-/icon-72x72.png
-/icon-96x96.png
-/manifest.json
-/icon-384x384.png
 /icon-152x152.png
 /icon-144x144.png
+/icon-192x192.png
+/icon-72x72.png
+/icon-128x128.png
+/icon-384x384.png
+/icon-512x512.png
+/icon-96x96.png
+/manifest.json
+/favicon-16x16.png
 
 NETWORK:
 *

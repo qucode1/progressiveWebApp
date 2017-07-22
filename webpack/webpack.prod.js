@@ -2,7 +2,7 @@ const { resolve } = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
@@ -41,20 +41,34 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
+      // {
+      //   test: /\.css$/,
+      //   use: ExtractTextPlugin.extract({
+      //     use: [
+      //       {
+      //         loader: 'css-loader',
+      //         options: {
+      //           modules: true,
+      //           localIdentName: '[name]-[local]-[hash:base64:8]',
+      //           camelCase: true
+      //         }
+      //       }
+      //     ]
+      //   })
+      // }
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[name]-[local]-[hash:base64:8]',
-                camelCase: true
-              }
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]-[local]-[hash:base64:8]',
+              camelCase: true
             }
-          ]
-        })
+          }
+        ]
       }
     ]
   },
@@ -84,9 +98,10 @@ module.exports = {
       template: `./index.html`
     }),
     new DashboardPlugin(),
-    new ExtractTextPlugin({
-      filename: '[name].css'
-    }),
+    // new ExtractTextPlugin({
+    //   filename: 'styles.[name].[chunkhash:6].css',
+    //   allChunks: true
+    // }),
     new CopyWebpackPlugin([{
       from: resolve(__dirname, '../src/icons/'),
       to: resolve(__dirname, '../dist/')
